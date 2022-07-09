@@ -21,6 +21,7 @@ public class PrimeiraClasseJava {
 
 			String login = JOptionPane.showInputDialog("Informe o login");
 			String senha = JOptionPane.showInputDialog("Informe a senha");
+			/*login admin && senha admin*/
 
 			if (new Secretario().autenticar(login, senha)) {
 				JOptionPane.showMessageDialog(null, "Bem vindo, acesso permitido!!");
@@ -37,10 +38,10 @@ public class PrimeiraClasseJava {
 					String dataNascimento = JOptionPane.showInputDialog("Qual a data de nascimento?");
 					String registroGeral = JOptionPane.showInputDialog("Qual o RG do aluno?");
 					String numeroCpf = JOptionPane.showInputDialog("Qual o CPF do aluno?");
-					String nomeMae = JOptionPane.showInputDialog("Qual o nome da m„e do aluno?");
+					String nomeMae = JOptionPane.showInputDialog("Qual o nome da m√£e do aluno?");
 					String nomePai = JOptionPane.showInputDialog("Qual o nome do pai?");
-					String dataMatricula = JOptionPane.showInputDialog("Qual a data da matrÌcula?");
-					String serieMatriculado = JOptionPane.showInputDialog("Qual a sÈrie do aluno?");
+					String dataMatricula = JOptionPane.showInputDialog("Qual a data da matr√≠cula?");
+					String serieMatriculado = JOptionPane.showInputDialog("Qual a s√©rie do aluno?");
 					
 					Aluno aluno1 = new Aluno();
 
@@ -102,18 +103,18 @@ public class PrimeiraClasseJava {
 
 					System.out.println("Resultado = " + aluno.getAlunoAprovado());
 
-					System.out.println("MÈdia = " + aluno.getMediaNota0());
+					System.out.println("M√©dia = " + aluno.getMediaNota0());
 
 				}
 
-				System.out.println("--------------- Lista dos alunos em recuperaÁ„o ------------");
+				System.out.println("--------------- Lista dos alunos em recupera√ß√£o ------------");
 				for (Aluno aluno : alunosRecuperacao) {
 
 					System.out.println(aluno);
 
 					System.out.println("Resultado = " + aluno.getAlunoAprovado());
 
-					System.out.println("MÈdia = " + aluno.getMediaNota0());
+					System.out.println("M√©dia = " + aluno.getMediaNota0());
 
 				}
 
@@ -124,11 +125,11 @@ public class PrimeiraClasseJava {
 
 					System.out.println("Resultado = " + aluno.getAlunoAprovado());
 
-					System.out.println("MÈdia = " + aluno.getMediaNota0());
+					System.out.println("M√©dia = " + aluno.getMediaNota0());
 
 				}
 			} else {
-				JOptionPane.showMessageDialog(null, "Acesso n„o permitido");
+				JOptionPane.showMessageDialog(null, "Acesso n√£o permitido");
 			}
 
 		} catch (NumberFormatException e) {
@@ -139,14 +140,14 @@ public class PrimeiraClasseJava {
 
 			for (int pos = 0; pos < e.getStackTrace().length; pos++) {
 				saida.append("\n Classe de erro: " + e.getStackTrace()[pos].getClassName());
-				saida.append("\n MÈtodo com erro: " + e.getStackTrace()[pos].getMethodName());
+				saida.append("\n M√©todo com erro: " + e.getStackTrace()[pos].getMethodName());
 				saida.append("\n Linha com erro: " + e.getStackTrace()[pos].getLineNumber());
 				saida.append("\n Class:" + e.getClass().getName());
 
 			}
 
 			e.printStackTrace();
-			JOptionPane.showMessageDialog(null, " Erro de convers„o de n˙meros  " + saida.toString());
+			JOptionPane.showMessageDialog(null, " Erro de convers√£o de n√∫meros  " + saida.toString());
 		} catch (NullPointerException e) {
 			JOptionPane.showMessageDialog(null, " Erro de NullPointerException  " + e.getClass());
 		} catch (Exception e) {
